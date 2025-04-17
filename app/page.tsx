@@ -12,13 +12,12 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { TestimonialSlider } from "@/components/testimonial-slider"
 import { useRouter } from "next/navigation" // Import useRouter
-import { FormEvent } from "react" // Import FormEvent
 
 export default function Home() {
   const [skillCategory, setSkillCategory] = useState("")
   const router = useRouter() // Initialize the router for navigation
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => { // Type the event here
+  const handleSubmit = (e) => {
     e.preventDefault() // Prevent default form submission
 
     // Redirect to the /thank-you page
