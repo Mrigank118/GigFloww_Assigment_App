@@ -93,7 +93,7 @@ yarn dev
 ```
 
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+4. Open [http://localhost:3000](https://gig-floww-assigment-app.vercel.app/) in your browser to see the result.
 
 
 ## Why Next.js for GigFloww?
@@ -117,29 +117,3 @@ npm run build
 # or
 vercel deploy
 ```
-
-## Future Development
-
-- User authentication and profile management
-- Job posting and application system
-- Messaging system between freelancers and clients
-- Payment integration
-- Advanced search and filtering
-- Analytics dashboard
-
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgements
-
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [shadcn/ui](https://ui.shadcn.com/)
-- [Lucide Icons](https://lucide.dev/)
-
-
----
-
-Created with ❤️ by [Your Name]
