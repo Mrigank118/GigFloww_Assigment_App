@@ -12,7 +12,7 @@ GigFloww is a comprehensive platform designed to empower creative professionals 
 
 ## UI MOCK UP
 
-![GigFloww Preview](GigFloww_Preview.png)
+![GigFloww Preview](GigFloww.png)
 
 ## Features
 
