@@ -14,12 +14,18 @@ export function Navigation() {
         <Link href="/" className="flex items-center gap-2">
           <span className="text-2xl font-bold">GigFloww</span>
         </Link>
+
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           <Link href="/" className="text-sm font-medium hover:underline underline-offset-4">
             Home
           </Link>
+
           <div className="relative group">
-            <Link href="#" className="text-sm font-medium hover:underline underline-offset-4 flex items-center gap-1">
+            <Link
+              href="#"
+              className="text-sm font-medium hover:underline underline-offset-4 flex items-center gap-1"
+            >
               Services
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -48,28 +54,43 @@ export function Navigation() {
               </Link>
             </div>
           </div>
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
+
+          <Link href="#testimonials" className="text-sm font-medium hover:underline underline-offset-4">
             Testimonials
           </Link>
+
           <Button className="bg-rose-600 hover:bg-rose-700">Join Now</Button>
         </nav>
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+
+        {/* Hamburger Icon */}
+        <Button
+          variant="ghost"
+          size="icon"
+          className="md:hidden"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           <span className="sr-only">Toggle menu</span>
         </Button>
       </div>
+
+      {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="container md:hidden">
-          <nav className="hidden md:flex items-center gap-6">
+        <div className="md:hidden bg-white border-t">
+          <nav className="flex flex-col gap-4 px-4 py-4">
             <Link href="/" className="text-sm font-medium hover:underline underline-offset-4">
               Home
             </Link>
-            {/* ... other links ... */}
+            <Link href="#services" className="text-sm font-medium hover:underline underline-offset-4">
+              Services
+            </Link>
+            <Link href="#testimonials" className="text-sm font-medium hover:underline underline-offset-4">
+              Testimonials
+            </Link>
             <Link href="#register">
-              <Button className="bg-rose-600 hover:bg-rose-700">Join Now</Button>
+              <Button className="bg-rose-600 hover:bg-rose-700 w-full">Join Now</Button>
             </Link>
           </nav>
-
         </div>
       )}
     </header>
