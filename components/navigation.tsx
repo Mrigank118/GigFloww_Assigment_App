@@ -9,7 +9,7 @@ export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white pt-4">  
+    <header className="sticky top-0 z-50 w-full border-b bg-white pt-4">
       <div className="container flex items-center justify-between h-16 px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <span className="text-2xl font-bold">GigFloww</span>
@@ -60,20 +60,18 @@ export function Navigation() {
       </div>
       {isMenuOpen && (
         <div className="container md:hidden">
-          <nav className="flex flex-col gap-4 p-4">
+          <nav className="hidden md:flex items-center gap-6">
             <Link href="/" className="text-sm font-medium hover:underline underline-offset-4">
               Home
             </Link>
-            <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
-              Services
+            {/* ... other links ... */}
+            <Link href="#register">
+              <Button className="bg-rose-600 hover:bg-rose-700">Join Now</Button>
             </Link>
-            <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
-              Testimonials
-            </Link>
-            <Button className="bg-rose-600 hover:bg-rose-700">Join Now</Button>
           </nav>
+
         </div>
       )}
-    </header>  
+    </header>
   )
 }

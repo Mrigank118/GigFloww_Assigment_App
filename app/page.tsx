@@ -28,9 +28,11 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col gap-4 min-[400px]:flex-row">
-                <Button size="lg" className="px-8 py-4 bg-rose-600 hover:bg-rose-700 text-lg">
-                  Join Now
-                </Button>
+                <a href="#register">
+                  <Button size="lg" className="px-8 py-4 bg-rose-600 hover:bg-rose-700 text-lg">
+                    Join Now
+                  </Button>
+                </a>
               </div>
             </div>
             <div className="flex items-center justify-center">
@@ -110,7 +112,7 @@ export default function Home() {
       </section>
 
       {/* Sign-Up Form Section */}
-      <section className="w-full py-12 md:py-20 lg:py-24 bg-[#fafafa]">
+      <section id="register" className="w-full py-12 md:py-20 lg:py-24 bg-[#fafafa]">
         <div className="container px-6 md:px-8">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">
@@ -123,7 +125,7 @@ export default function Home() {
           <div className="mx-auto max-w-lg py-12">
             <Card>
               <CardContent className="p-8">
-                <form className="space-y-6">
+                <form action="/thank-you" method="POST" className="space-y-6">
                   {[
                     { id: 'name', label: 'Name', type: 'text', placeholder: 'Enter your name' },
                     { id: 'email', label: 'Email', type: 'email', placeholder: 'Enter your email' },
@@ -156,6 +158,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
       <Footer />
     </div>

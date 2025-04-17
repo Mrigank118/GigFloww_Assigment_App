@@ -6,6 +6,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* globals.css or similar */
+
+@layer components {
+  button {
+    @apply px-6 py-3 rounded-md text-white bg-rose-600 transition-all duration-300 ease-in-out transform;
+  }
+
+  button:hover {
+    @apply bg-rose-700 shadow-lg scale-105 ring-2 ring-rose-500;
+  }
+
+  button:focus-visible {
+    @apply outline-none ring-4 ring-rose-500;
+  }
+}
+
+/* styles/globals.css */
+html {
+  scroll-behavior: smooth;
+}
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
