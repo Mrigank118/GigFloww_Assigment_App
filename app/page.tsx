@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -10,6 +13,8 @@ import { Footer } from "@/components/footer"
 import { TestimonialSlider } from "@/components/testimonial-slider"
 
 export default function Home() {
+  const [skillCategory, setSkillCategory] = useState("")
+
   return (
     <div className="flex min-h-screen flex-col">
       <Navigation />
@@ -94,7 +99,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonial Slider Section */}
+      {/* Testimonial Section */}
       <section className="w-full py-12 md:py-20 lg:py-24">
         <div className="container px-6 md:px-8">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -111,7 +116,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sign-Up Form Section */}
+      {/* Register Section */}
       <section id="register" className="w-full py-12 md:py-20 lg:py-24 bg-[#fafafa]">
         <div className="container px-6 md:px-8">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -133,21 +138,25 @@ export default function Home() {
                   ].map(({ id, label, type, placeholder }) => (
                     <div className="space-y-2" key={id}>
                       <Label htmlFor={id} className="text-lg">{label}</Label>
-                      <Input id={id} type={type} placeholder={placeholder} className="py-3 text-lg" />
+                      <Input id={id} name={id} type={type} placeholder={placeholder} className="py-3 text-lg" required />
                     </div>
                   ))}
                   <div className="space-y-2">
                     <Label htmlFor="skill" className="text-lg">Skill Category</Label>
-                    <Select>
-                      <SelectTrigger className="py-3">
-                        <SelectValue placeholder="Select a skill category" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {['Design', 'Development', 'Marketing', 'Writing', 'Other'].map((opt) => (
-                          <SelectItem value={opt.toLowerCase()} key={opt}>{opt}</SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                    <Select value={skillCategory} onValueChange={setSkillCategory}>
+  <SelectTrigger
+    className="py-3 text-black hover:text-white border border-gray-300 hover:bg-pink hover:border-pink focus:ring-2 focus:ring-rose-500"
+  >
+    <SelectValue placeholder="Select a skill category" />
+  </SelectTrigger>
+  <SelectContent>
+    {['Design', 'Development', 'Marketing', 'Writing', 'Other'].map((opt) => (
+      <SelectItem value={opt.toLowerCase()} key={opt}>{opt}</SelectItem>
+    ))}
+  </SelectContent>
+</Select>
+
+                    <input type="hidden" name="skill" value={skillCategory} />
                   </div>
                   <Button type="submit" className="w-full px-8 py-4 bg-rose-600 hover:bg-rose-700 text-lg">
                     Submit
@@ -158,7 +167,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       <Footer />
     </div>
