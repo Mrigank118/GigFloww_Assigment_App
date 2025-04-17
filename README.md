@@ -10,6 +10,10 @@ A modern platform connecting talented freelancers with quality clients, built wi
 
 GigFloww is a comprehensive platform designed to empower creative professionals in the gig economy. The platform facilitates connections between freelancers and clients, provides skill development resources, and offers tools for portfolio showcasing and career growth.
 
+## UI MOCK UP
+
+![GigFloww Preview](./GigFloww_Preview.png)
+
 ## Features
 
 - **Responsive Design**: Fully responsive UI that works seamlessly across mobile, tablet, and desktop devices
