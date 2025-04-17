@@ -93,7 +93,7 @@ yarn dev
 ```
 
 
-4. Open [http://localhost:3000](https://gig-floww-assigment-app.vercel.app/) in your browser to see the result.
+4. Open [Link to The Deployed App](https://gig-floww-assigment-app.vercel.app/) in your browser to see the result.
 
 
 ## Why Next.js for GigFloww?
